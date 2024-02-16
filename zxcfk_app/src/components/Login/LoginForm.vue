@@ -57,13 +57,18 @@
     }),
     methods: {
         checkData() {
-            if (this.login == '' || this.password == '') {
+            if (this.login == '') {
                 return
             }
 
+            if (this.password.length < 5){
+              alert('Пароль должен содержать не менее 5 символов.')
+                return
+            }
             this.$router.push('/Profile')
         }
     }
   }
+  
   </script>
   
